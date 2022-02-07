@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Digital clock</title>
+  <link rel="stylesheet" href="design.css">
+</head>
+<button onclick="location.href='file:///C:/Users/Rahul%20Relan/Documents/ghadi/ghadi.html';" id="myButton" >Move To Analog</button>
+<body>
+    
+    <div id="clock">
+        <h1>Current Time</h1>
+        <div id="Time">
+            <div><span id="hour">00</span><span>Hours</span></div>
+            <div><span id="minutes">00</span><span>Minute</span></div>
+            <div><span id="seconds">00</span><span>Seconds</span></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function clock(){
+            var hours= document.getElementById('hour');
+            var minutes= document.getElementById('minutes');
+            var seconds= document.getElementById('seconds');
+
+            var h = new Date().getHours();
+            var m = new Date().getMinutes();
+            var s = new Date().getSeconds();
+
+            hours.innerHTML =h;
+            minutes.innerHTML = m;
+            seconds.innerHTML = s;
+        }
+var interval = setInterval(clock, 1000);
+      </script>
+</body>
+</html>
